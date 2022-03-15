@@ -270,22 +270,40 @@ Use the following optional architectural guidelines while refactoring and implem
 
     |user|I|N|V|E|S|T|SUM|
     |-|-|-|-|-|-|-|-|
-    |1||||||||
-    |2||||||||
+    |1|-1|1|1|2|2|2|7|
+    |2|-1|1|1|1|1|2|5|
+    
+    	GIVEN I have a list of acceptance rules
+        WHEN I select an acceptance rule
+        AND click on delete
+        THEN the rule should disappear from that list and no longer applies
+
+        GIVEN I have a list of acceptance rules
+        WHEN I select an acceptance rule
+        AND click on delete
+        THEN the rule is selected anymore
+
+        GIVEN I have a list of acceptance rules
+        WHEN I select no acceptance rule
+        THEN the delete button is not useable
 
 - I want to be able to see a list of email addresses of customers who use the website so that I can send them a newsletter.
 
     |user|I|N|V|E|S|T|SUM|
     |-|-|-|-|-|-|-|-|
-    |1||||||||
-    |2||||||||
+    |1|0|1|0|1|1|2|5|
+    |2|0|1|2|1|0|1|5|
+
+        Rejected for now, because the persona needs to be identified, but will be specified by the client later.
 
 - I want to be able to see a picture of the vehicle submitted by the customer so that I can manually reject a vehicle if it has damage.
 
     |user|I|N|V|E|S|T|SUM|
     |-|-|-|-|-|-|-|-|
-    |1||||||||
-    |2||||||||
+    |1|0|1|1|0|0|1|3|
+    |2|-1|2|1|1|1|2|6|
+
+        Rejected for now, BUT added to backlog as spike.
 
 ## Helpful Resources
 
