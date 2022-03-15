@@ -15,7 +15,38 @@ Use the following optional architectural guidelines while refactoring and implem
 ## User Stories
 
 - I want to see a full inventory of vehicles the company owns so I can see if my car is already listed.
+
+    |user|I|N|V|E|S|T|SUM|
+    |-|-|-|-|-|-|-|-|
+    |1|1|2|-1|1|2|2|7|
+    |2|1|2|0|2|2|2|9|
+
+    Rejected, as it allows access to the wrong content of another user group.
+    But it gets fulfilled with the next user story and correct visible scope.
+
 - I want to see a history of the cars I have submitted to the form so that I don't submit a vehicle a second time.
+
+    |user|I|N|V|E|S|T|SUM|
+    |-|-|-|-|-|-|-|-|
+    |1|1|2|2|1|2|2|10|
+    |2|1|1|1|1|2|2|8|
+
+    GIVEN I have never entered any cars
+    WHEN I check my history
+    THEN it should show an empty list
+
+    GIVEN I have submitted only one car
+    WHEN I check my history
+    THEN it should show me exactly that one car
+
+    GIVEN the API is down
+    WHEN I check my history
+    THEN it should show me an error.
+
+    GIVEN I am not logged in
+    WHEN I check my history
+    THEN I am am redirected to the login
+
 - I want to be able to create new model and year acceptance rules through the website so that I can accept more types of vehicles.
 - I want to see the value of each vehicle in my inventory so I can price the vehicles on my lot.
 - I want to see a message that tells me why a car is not valid so that I know why my submission is being rejected.
