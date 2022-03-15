@@ -209,8 +209,8 @@ Use the following optional architectural guidelines while refactoring and implem
 
     |user|I|N|V|E|S|T|SUM|
     |-|-|-|-|-|-|-|-|
-    |1||||||||
-    |2||||||||
+    |1|1|2|1|1|1|2|8|
+    |2|1|1|1|1|2|2|8|
     
         color of all cars known for the website?
         getColors ⟹ ["RED", "GREEN", "HOTPINK", "YELLOW", "SILVER"]
