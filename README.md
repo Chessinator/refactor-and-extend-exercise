@@ -31,29 +31,21 @@ Use the following optional architectural guidelines while refactoring and implem
     |1|1|2|2|1|2|2|10|
     |2|1|1|1|1|2|2|8|
 
-    > GIVEN I have never entered any cars
-    > 
-    > WHEN I check my history
-    > 
-    > THEN it should show an empty list
+        GIVEN I have never entered any cars
+        WHEN I check my history
+        THEN it should show an empty list
 
-    > GIVEN I have submitted only one car
-    > 
-    > WHEN I check my history
-    > 
-    > THEN it should show me exactly that one car
+        GIVEN I have submitted only one car
+        WHEN I check my history
+        THEN it should show me exactly that one car
 
-    > GIVEN the API is down
-    > 
-    > WHEN I check my history
-    > 
-    > THEN it should show me an error.
+        GIVEN the API is down
+        WHEN I check my history
+        THEN it should show me an error.
 
-    > GIVEN I am not logged in
-    > 
-    > WHEN I check my history
-    > 
-    > THEN I am am redirected to the login
+        GIVEN I am not logged in
+        WHEN I check my history
+        THEN I am am redirected to the login
 
 
 - I want to be able to create new model and year acceptance rules through the website so that I can accept more types of vehicles.
@@ -63,47 +55,32 @@ Use the following optional architectural guidelines while refactoring and implem
     |1|1|2|2|-1|-1|2|5|
     |2|1|2|1|1|1|2|8|
     
-    > GIVEN I have entered a valid rule
-    > 
-    > WHEN I submit the rule
-    > 
-    > THEN the rule should be added the current rules and applied
+        GIVEN I have entered a valid rule
+        WHEN I submit the rule
+        THEN the rule should be added the current rules and applied
 
-    > GIVEN I have entered an invalid rule
-    > 
-    > WHEN I submit the rule
-    > 
-    > THEN it should show me an error showing which inputs are wrong
+        GIVEN I have entered an invalid rule
+        WHEN I submit the rule
+        THEN it should show me an error showing which inputs are wrong
 
-    > GIVEN I have entered a rule
-    > 
-    > AND the API is down
-    > 
-    > WHEN I submit the rule
-    > 
-    > THEN it should show me an error
-    > 
-    > AND stay on the filled out form
+        GIVEN I have entered a rule
+        AND the API is down
+        WHEN I submit the rule
+        THEN it should show me an error
+        AND stay on the filled out form
 
-    > GIVEN I have entered a rule
-    > 
-    > AND I am not logged in
-    > 
-    > WHEN I submit the rule
-    > 
-    > THEN I am am redirected to the login
+        GIVEN I have entered a rule
+        AND I am not logged in
+        WHEN I submit the rule
+        THEN I am am redirected to the login
 
-    > GIVEN I have been redirected...
-    > 
-    > WHEN i succesfully log in
-    > 
-    > THEN I am being redirect back to the rules screen
+        GIVEN I have been redirected...
+        WHEN i succesfully log in
+        THEN I am being redirect back to the rules screen
 
-    > GIVEN I haven just been re-redirected to the rules screen after logging in
-    > 
-    > WHEN
-    > 
-    > THEN the previous rule values are applied
+        GIVEN I haven just been re-redirected to the rules screen after logging in 
+        WHEN
+        THEN the previous rule values are applied
 
 - I want to see the value of each vehicle in my inventory so I can price the vehicles on my lot.
 
