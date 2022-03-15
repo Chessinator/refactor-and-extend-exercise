@@ -78,8 +78,12 @@ Use the following optional architectural guidelines while refactoring and implem
         WHEN i succesfully log in
         THEN I am being redirect back to the rules screen
 
-        GIVEN I haven just been re-redirected to the rules screen after logging in 
-        WHEN
+        GIVEN I have entered some rule values in the rule screen
+        AND I have not been logged in
+        AND I tried to submit
+        AND I got redirected to the log in
+        AND I successfully log in
+        WHEN I am redirected to the rule screen
         THEN the previous rule values are applied
 
 - I want to see the value of each vehicle in my inventory so I can price the vehicles on my lot.
