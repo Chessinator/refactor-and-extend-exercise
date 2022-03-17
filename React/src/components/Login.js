@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 
-export default class SignUp extends Component {
-    render() {
-        return (
-            <form>
+const Login = () => {
+
+    const navigate = useNavigate();
+
+    return (
+        <form className="register-form" onSubmit={() => navigate('/start')}>
             <h3>Sign In</h3>
             <div className="form-group">
                 <label>Email address</label>
@@ -20,11 +23,13 @@ export default class SignUp extends Component {
                     <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                 </div>
             </div>
-            <button type="submit" className="btn btn-primary btn-block">Submit</button>
+            <button type="submit" className="btn btn-primary btn-block" >Submit</button>
             <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
+                Forgot password?
             </p>
         </form>
-        );
-    }
+    );
+
 }
+
+export default Login;

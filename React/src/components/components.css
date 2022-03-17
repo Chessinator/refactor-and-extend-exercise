@@ -1,0 +1,10 @@
+.register-form .form-group {
+    --space: 1.2rem;
+    margin-top: var(--space);
+    margin-bottom: var(--space);
+}
+
+.nav-link-inline {
+    display: inline !important;
+    padding: 5px !important;
+}

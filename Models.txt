@@ -1,0 +1,27 @@
+Car
+- id -> generate by db
+- VIN
+- make
+- model
+- year
+- color
+- description
+- List<Image>
+
+User
+- id -> generate by db
+- username
+- email
+- password
+- List<Role> -> ADMIN, USER, SELLER, BUYER, COMPANY?
+- firstName
+- lastName
+
+Company
+- id
+- name
+- tradeRegisterNumber
+- VATNumber
+- adress
+- email
+- List<Car>

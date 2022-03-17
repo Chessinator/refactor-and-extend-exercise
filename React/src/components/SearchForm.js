@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import CarValidator from "../validator/CarValidator.js";
+import './components.css'
 
 const SearchForm = ({ setIsValid }) => {
     const [make, setMake] = useState("");
@@ -21,15 +22,26 @@ const SearchForm = ({ setIsValid }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Make:</label>
-            <input type="text" name="make" value={make} onChange={handleMakeChange} />
-            <br />
-            <label>Year:</label>
-            <input type="text" name="year" value={year} onChange={handleYearChange} />
-            <br />
-            <button type="submit">Validate</button>
-        </form>
+        <div>
+            <form className="register-form" onSubmit={handleSubmit} >
+                <div className="form-group">
+                    <label>Make:</label>
+                    <input type="text" name="make" className="form-control" value={make} onChange={handleMakeChange} />
+                </div>
+
+                <div className="form-group">
+                    <label>Year:</label>
+                    <input type="text" name="year" className="form-control" value={year} onChange={handleYearChange} />
+                </div>
+
+                <div className="form-group">
+                    <button type="submit">Validate</button>
+                </div>
+
+
+
+            </form>
+        </div>
     )
 }
 

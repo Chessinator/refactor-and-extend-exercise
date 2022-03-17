@@ -1,19 +1,49 @@
-import { useState } from 'react';
-import React from 'react';
-import SearchForm from './components/SearchForm';
-import Login from './components/Login'
 
+import React from 'react';
+import Login from './components/Login'
+import { NavLink } from 'react-router-dom';
+import SignUp from './components/SignUp';
+import { Routes, Route} from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Start from './components/Start';
 
 
 const App = () => {
-  const [isValid, setIsValid] = useState(false);
+
+  const path = window.location.pathname;
 
   return (
-    
-      <div className="App">
-        {isValid ? <h2>Valid Vehicle</h2> : <h2>Invalid Vehicle</h2>}
-        <SearchForm setIsValid={setIsValid} />
+
+    <div className="App">
+      <nav className="navbar navbar-expand-lg navbar-light ">
+        <div className="container">
+
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link" to={"/sign-in"}>Login</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to={"/sign-up"}>Sign up</NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div className="auth-wrapper">
+        <div className="auth-inner">
+      
+          <Routes>
+            <Route path="/sign-in" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/start" element={<Start />} />
+          </Routes>
+          
+        </div>
       </div>
+    </div>
+
+
   )
 }
 
